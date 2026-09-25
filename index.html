@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1020" />
+  <title>VIVA BOOK PUBLICATION | Handwriting Work</title>
+  <meta name="description" content="VIVA BOOK PUBLICATION — online data ko handwriting work ke format mein convert karne ke liye task-based work opportunities." />
+  <style>
+    :root{
+      --bg:#070b16;
+      --bg2:#0d1324;
+      --card:rgba(255,255,255,.075);
+      --card2:rgba(255,255,255,.055);
+      --text:#f7f8ff;
+      --muted:#aeb6ca;
+      --line:rgba(255,255,255,.12);
+      --primary:#6d5dfc;
+      --primary2:#8d7cff;
+      --green:#20d394;
+      --yellow:#ffd166;
+      --shadow:0 24px 70px rgba(0,0,0,.35);
+      --radius:24px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(109,93,252,.22), transparent 28%),
+        radial-gradient(circle at 90% 15%, rgba(32,211,148,.12), transparent 25%),
+        linear-gradient(180deg,var(--bg),#0a0f1d 55%,#070b16);
+      line-height:1.55;
+    }
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(1120px,92%);margin:auto}
+    .nav{
+      position:sticky;top:0;z-index:20;
+      backdrop-filter:blur(18px);
+      background:rgba(7,11,22,.72);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .navin{height:74px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+    .brand img{width:42px;height:42px;border-radius:12px;object-fit:cover;background:#fff}
+    .brand span{font-size:16px}
+    .navlinks{display:flex;gap:24px;color:var(--muted);font-size:14px}
+    .navlinks a:hover{color:#fff}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:9px;
+      padding:13px 19px;border-radius:14px;font-weight:800;font-size:14px;
+      transition:.2s transform,.2s box-shadow,.2s background;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:linear-gradient(135deg,var(--primary),var(--primary2));box-shadow:0 12px 30px rgba(109,93,252,.3)}
+    .btn-ghost{border:1px solid var(--line);background:rgba(255,255,255,.04)}
+    .hero{padding:88px 0 65px;position:relative;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:50px;align-items:center}
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;
+      background:rgba(32,211,148,.1);border:1px solid rgba(32,211,148,.25);
+      color:#76efbf;font-size:13px;font-weight:800
+    }
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 6px rgba(32,211,148,.1)}
+    h1{font-size:clamp(42px,6vw,70px);line-height:1.02;margin:20px 0 18px;letter-spacing:-2.6px}
+    .grad{background:linear-gradient(90deg,#fff,#a89eff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{font-size:18px;color:var(--muted);max-width:650px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}
+    .trust{display:flex;gap:22px;flex-wrap:wrap;color:#c9d0df;font-size:13px;margin-top:24px}
+    .trust b{color:#fff}
+    .hero-card{
+      background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.045));
+      border:1px solid var(--line);border-radius:30px;padding:22px;box-shadow:var(--shadow);
+    }
+    .paper{
+      background:#fbfaf4;color:#1d2433;border-radius:18px;padding:24px;
+      transform:rotate(1.2deg);box-shadow:0 20px 45px rgba(0,0,0,.35);
+    }
+    .paper-head{display:flex;justify-content:space-between;align-items:center;border-bottom:2px dashed #d6d4cc;padding-bottom:14px;margin-bottom:17px}
+    .paper-title{font-weight:900;font-size:18px}
+    .paper-tag{font-size:11px;background:#e9fff5;color:#12875e;border-radius:999px;padding:6px 9px;font-weight:800}
+    .hand-lines{display:grid;gap:11px}
+    .hand-lines span{height:10px;background:linear-gradient(90deg,#353d4d 0 74%,transparent 74%);opacity:.18;border-radius:9px}
+    .hand-lines span:nth-child(2){background:linear-gradient(90deg,#353d4d 0 91%,transparent 91%);opacity:.14}
+    .hand-lines span:nth-child(3){background:linear-gradient(90deg,#353d4d 0 62%,transparent 62%);opacity:.18}
+    .hand-lines span:nth-child(4){background:linear-gradient(90deg,#353d4d 0 84%,transparent 84%);opacity:.14}
+    .hand-lines span:nth-child(5){background:linear-gradient(90deg,#353d4d 0 70%,transparent 70%);opacity:.18}
+    .hand-lines span:nth-child(6){background:linear-gradient(90deg,#353d4d 0 88%,transparent 88%);opacity:.14}
+    .stamp{margin-top:20px;padding:12px;border:2px solid #1fbd83;color:#16855f;border-radius:12px;text-align:center;font-weight:900;letter-spacing:.5px}
+    section{padding:72px 0}
+    .section-head{max-width:700px;margin-bottom:30px}
+    .eyebrow{color:#8f84ff;text-transform:uppercase;letter-spacing:1.8px;font-size:12px;font-weight:900}
+    h2{font-size:clamp(30px,4vw,44px);line-height:1.1;margin:10px 0 12px;letter-spacing:-1.3px}
+    .sub{color:var(--muted);margin:0}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .card{
+      background:var(--card2);border:1px solid var(--line);border-radius:var(--radius);padding:24px;
+      box-shadow:0 12px 45px rgba(0,0,0,.16)
+    }
+    .num{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:rgba(109,93,252,.16);color:#aaa1ff;font-weight:900;margin-bottom:18px}
+    .card h3{margin:0 0 8px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px}
+    .zero{
+      display:flex;align-items:center;justify-content:space-between;gap:24px;
+      padding:28px 30px;border-radius:25px;
+      background:linear-gradient(120deg,rgba(32,211,148,.13),rgba(109,93,252,.12));
+      border:1px solid rgba(32,211,148,.2)
+    }
+    .zero strong{display:block;font-size:25px}.zero span{color:var(--muted);font-size:14px}
+    .badge{white-space:nowrap;padding:11px 15px;border-radius:999px;background:var(--green);color:#06291d;font-weight:900}
+    .packages{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .package{position:relative;overflow:hidden}
+    .package.featured{border-color:rgba(141,124,255,.55);box-shadow:0 20px 65px rgba(109,93,252,.12)}
+    .popular{position:absolute;right:18px;top:18px;font-size:11px;font-weight:900;padding:6px 9px;border-radius:999px;background:#7d6cff}
+    .package h3{font-size:23px;margin:0 0 7px}.pages{color:#fff;font-weight:900;font-size:16px}
+    .package ul{padding:0;margin:20px 0 24px;list-style:none;display:grid;gap:11px}
+    .package li{color:var(--muted);font-size:14px}.package li::before{content:"✓";color:var(--green);font-weight:900;margin-right:9px}
+    .full{width:100%}
+    .faq{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    details{background:var(--card2);border:1px solid var(--line);border-radius:18px;padding:18px 20px}
+    summary{cursor:pointer;font-weight:800} details p{color:var(--muted);font-size:14px;margin:13px 0 0}
+    .cta{padding:0 0 80px}.cta-box{text-align:center;padding:55px 25px;border-radius:30px;background:linear-gradient(135deg,rgba(109,93,252,.2),rgba(32,211,148,.09));border:1px solid var(--line)}
+    .cta-box p{color:var(--muted);max-width:600px;margin:0 auto 25px}
+    footer{border-top:1px solid var(--line);padding:28px 0 35px;color:var(--muted);font-size:13px}
+    .ad-manager{
+      position:relative;overflow:hidden;text-align:center;margin-bottom:32px;padding:34px 28px;
+      border:1px solid rgba(141,124,255,.42);border-radius:28px;
+      background:
+        radial-gradient(circle at 15% 20%,rgba(109,93,252,.24),transparent 34%),
+        radial-gradient(circle at 85% 80%,rgba(32,211,148,.16),transparent 32%),
+        linear-gradient(135deg,rgba(109,93,252,.12),rgba(255,255,255,.045));
+      box-shadow:0 20px 60px rgba(0,0,0,.22)
+    }
+    .ad-manager::after{
+      content:"";position:absolute;width:180px;height:180px;border-radius:50%;
+      right:-80px;top:-90px;border:1px solid rgba(255,255,255,.08)
+    }
+    .ad-kicker{color:#a89eff;text-transform:uppercase;letter-spacing:1.7px;font-size:11px;font-weight:900}
+    .ad-manager h3{font-size:32px;margin:8px 0 7px;color:#fff;letter-spacing:-.8px}
+    .ad-manager p{max-width:700px;margin:0 auto 22px;color:var(--muted);font-size:14px}
+    .ad-manager p strong{color:#fff}
+    .ad-manager .btn-primary{
+      position:relative;
+      overflow:hidden;
+      color:#fff;
+      border:1px solid rgba(255,255,255,.16);
+      box-shadow:0 12px 30px rgba(109,93,252,.32);
+    }
+    .ad-manager .btn-primary::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      transform:translateX(-110%);
+      background:linear-gradient(100deg,transparent,rgba(255,255,255,.22),transparent);
+      transition:transform .55s ease;
+    }
+    .ad-manager .btn-primary:hover{
+      transform:translateY(-3px) scale(1.02);
+      background:linear-gradient(135deg,#8173ff,#9b8cff);
+      box-shadow:0 16px 38px rgba(109,93,252,.48);
+    }
+    .ad-manager .btn-primary:hover::before{
+      transform:translateX(110%);
+    }
+    .ad-manager .btn-primary:active{
+      transform:translateY(-1px) scale(.99);
+    }
+    .ad-manager .btn-primary:focus-visible{
+      outline:3px solid rgba(141,124,255,.45);
+      outline-offset:4px;
+    }
+    .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .foot a{color:#c8c0ff}.disclaimer{margin-top:18px;max-width:900px}
+    @media(max-width:900px){
+      .hero-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.packages{grid-template-columns:1fr}.faq{grid-template-columns:1fr}
+      .navlinks{display:none}
+    }
+    @media(max-width:560px){
+      .navin{height:66px}.brand span{font-size:14px}.nav .btn{padding:10px 13px}
+      .hero{padding-top:60px}h1{letter-spacing:-1.8px}.steps{grid-template-columns:1fr}.zero{align-items:flex-start;flex-direction:column}
+      section{padding:55px 0}.paper{padding:18px}.hero-card{padding:14px}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap navin">
+      <a class="brand" href="#top">
+        <img src="https://cdn5.telesco.pe/file/tLLmnxBxUlECW8DG48LmyW1Ymjwq-W-P-uJdHkDYCbwjXQOxK8YaVcqfV_LrWSfK9fu5Vzl3lyjoSvE0Fqo0SZSsK1UPgreDkZT-Sa2_v2KBnQXCvjcXhJphD6HCZAgiWFf40dQl5sZah7bKPhSm84hy55dF2pWSrXAvYMJZyIKxTk-fdQln85Z_8GwKtJrppqsbgDqSeRnfAi2_XRBFtjUCvrPFnaSAA89lUYy27f2HeUhH1mmDD_Ag8yplSPOZtxwqshXFIxEnRReJgDWQA5-POTJ19UztyWWr4BVGg8RENBrLx1EgAhdalWUdGO_-_wuMdirkFJ78topvjIbJmw.jpg" alt="VIVA BOOK PUBLICATION logo">
+        <span>VIVA BOOK PUBLICATION</span>
+      </a>
+      <div class="navlinks">
+        <a href="#how">How it works</a>
+        <a href="#projects">Projects</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a class="btn btn-primary" href="https://t.me/+VmbRQ0DVMB05ZDU1" target="_blank" rel="noopener">Join Telegram →</a>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="pill"><span class="dot"></span> ₹0 Registration Fee</div>
+          <h1>Online Data ko <span class="grad">Handwriting Work</span> mein convert karein.</h1>
+          <p class="lead">
+            VIVA BOOK PUBLICATION ke task-based handwriting work mein assigned online data ko handwritten format mein complete karein.
+            Task complete hone aur verification ke baad payment applicable task terms ke according hoti hai.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://t.me/+VmbRQ0DVMB05ZDU1" target="_blank" rel="noopener">Get Work Details on Telegram</a>
+            <a class="btn btn-ghost" href="#how">See How It Works</a>
+          </div>
+          <div class="trust">
+            <span>✓ <b>Zero</b> registration fee</span>
+            <span>✓ Task-based workflow</span>
+            <span>✓ Work from your own setup</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="paper">
+            <div class="paper-head">
+              <div class="paper-title">Handwriting Work Sheet</div>
+              <div class="paper-tag">TASK SAMPLE</div>
+            </div>
+            <div class="hand-lines">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="stamp">DATA → HANDWRITING → SUBMISSION</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Simple workflow</div>
+          <h2>Kaise kaam hota hai?</h2>
+          <p class="sub">Process ko simple aur clear rakha gaya hai — pehle task details samjhein, phir assigned work complete karein.</p>
+        </div>
+        <div class="steps">
+          <div class="card"><div class="num">01</div><h3>Task Details</h3><p>Telegram par available task ki requirements, pages aur submission instructions check karein.</p></div>
+          <div class="card"><div class="num">02</div><h3>Data Convert</h3><p>Diye gaye online data ko required handwriting format mein accurately write karein.</p></div>
+          <div class="card"><div class="num">03</div><h3>Submit Work</h3><p>Completed pages ko instructions ke according submit karein for review/verification.</p></div>
+          <div class="card"><div class="num">04</div><h3>Payment</h3><p>Accepted work ke liye payment applicable task terms aur verification process ke according hoti hai.</p></div>
+        </div>
+
+        <div class="zero" style="margin-top:22px">
+          <div><strong>Registration Fee: ₹0</strong><span>Joining ke liye koi registration charge nahi.</span></div>
+          <div class="badge">ZERO FEE</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Project examples</div>
+          <h2>Different task sizes</h2>
+          <p class="sub">Neeche example formats hain. Actual task availability, instructions aur payment task assignment ke time confirm kiye jayenge.</p>
+        </div>
+        <div class="packages">
+          <div class="card package">
+            <h3>Project 01</h3><div class="pages">30 Pages Book</div>
+            <ul><li>Front & back writing</li><li>Approx. 60 pages total</li><li>Task duration: 7 days</li><li>₹0 registration fee</li></ul>
+            <a class="btn btn-ghost full" href="https://t.me/+VmbRQ0DVMB05ZDU1" target="_blank" rel="noopener">Check Availability</a>
+          </div>
+          <div class="card package featured">
+            <div class="popular">POPULAR FORMAT</div>
+            <h3>Project 02</h3><div class="pages">50 Pages Book</div>
+            <ul><li>Front & back writing</li><li>Approx. 100 pages total</li><li>Task duration: 10 days</li><li>₹0 registration fee</li></ul>
+            <a class="btn btn-primary full" href="https://t.me/+VmbRQ0DVMB05ZDU1" target="_blank" rel="noopener">Check Availability</a>
+          </div>
+          <div class="card package">
+            <h3>Project 03</h3><div class="pages">75 Pages Book</div>
+            <ul><li>Front & back writing</li><li>Approx. 150 pages total</li><li>Task duration: 15 days</li><li>₹0 registration fee</li></ul>
+            <a class="btn btn-ghost full" href="https://t.me/+VmbRQ0DVMB05ZDU1" target="_blank" rel="noopener">Check Availability</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Questions</div>
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq">
+          <details open><summary>Registration fee kitni hai?</summary><p>Registration fee ₹0 hai. Kisi bhi joining/registration payment ko official task details ke bina na karein.</p></details>
+          <details><summary>Kaam kaise milega?</summary><p>Telegram channel/group par task details aur instructions check karke available work ke baare mein information le sakte hain.</p></details>
+          <details><summary>Payment kab milegi?</summary><p>Payment completed work ki acceptance/verification aur applicable task terms ke according hoti hai.</p></details>
+          <details><summary>Har task guaranteed hai?</summary><p>Task availability requirements aur current assignments par depend karti hai. Landing page kisi fixed volume ya income ko guarantee nahi karta.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap">
+        <div class="cta-box">
+          <div class="eyebrow">Start with the details</div>
+          <h2>Handwriting work ki latest details Telegram par dekhein.</h2>
+          <p>Available projects, instructions aur current task terms ke liye Telegram par connect karein.</p>
+          <a class="btn btn-primary" href="https://t.me/+VmbRQ0DVMB05ZDU1" target="_blank" rel="noopener">Join VIVA BOOK PUBLICATION →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="ad-manager">
+        <div class="ad-kicker">🚀 Want to Promote Your Business?</div>
+        <h3>AK GrowthX Media</h3>
+        <p>
+          Apne business, service, brand ya project ke liye targeted advertising karwani hai?
+          <strong>AK GrowthX Media</strong> se contact karein. Apne promotion ke liye message karein
+          aur advertising details, campaign options aur available placements ke baare mein jaanein.
+        </p>
+        <a class="btn btn-primary" href="https://t.me/+-GEJZUCQOShiYTRl" target="_blank" rel="noopener">
+          View AK GrowthX Media →
+        </a>
+      </div>
+
+      <div class="foot">
+        <div>© 2026 VIVA BOOK PUBLICATION. All rights reserved.</div>
+      </div>
+      <div class="disclaimer">
+        Information on this page is for task/work details. Task availability, acceptance, timelines and payment are subject to the applicable project instructions and verification. No fixed income or guaranteed earnings are promised on this page.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
